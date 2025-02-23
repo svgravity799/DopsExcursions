@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">27.195s</div>
+<div class="counter">29.032s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,24 +76,25 @@
 <a name="Excursion()"></a>
 <h3 class="failures">Excursion()</h3>
 <span class="code">
-<pre>Element not found {[class=v-icon-user-14]}
-Expected: clickable: interactable and enabled
-Page source: file:/Users/pavelyatmanov/IdeaProjects/DopsExcursions/build/reports/tests/1740311674882.0.html
+<pre>Element not found {by text: Адрес проживания на курорте}
+Expected: editable
+Screenshot: file:/Users/pavelyatmanov/IdeaProjects/DopsExcursions/build/reports/tests/1740330957148.0.png
+Page source: file:/Users/pavelyatmanov/IdeaProjects/DopsExcursions/build/reports/tests/1740330957148.0.html
 Timeout: 20 s.
-Caused by: NoSuchWindowException: no such window: target window already closed
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
 	at app//com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
 	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:143)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
-	at app//com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsClickable(WebElementSource.java:173)
-	at app//com.codeborne.selenide.commands.Click.findElement(Click.java:46)
-	at app//com.codeborne.selenide.commands.Click.execute(Click.java:28)
-	at app//com.codeborne.selenide.commands.Click.execute(Click.java:21)
+	at app//com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsEditable(WebElementSource.java:184)
+	at app//com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:58)
+	at app//com.codeborne.selenide.commands.SetValue.execute(SetValue.java:43)
+	at app//com.codeborne.selenide.commands.SetValue.execute(SetValue.java:25)
 	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:165)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at app/jdk.proxy3/jdk.proxy3.$Proxy16.click(Unknown Source)
-	at app//dops_excursions.Excursion(dops_excursions.java:19)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy17.setValue(Unknown Source)
+	at app//dops_excursions.Excursion(dops_excursions.java:46)
 	at java.base@23.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@23.0.2/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -174,15 +175,17 @@ Caused by: NoSuchWindowException: no such window: target window already closed
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '	
+ ', '    ')) = &quot;Адрес проживания на курорте&quot;]/parent::*&quot;}
   (Session info: chrome=133.0.6943.126)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.1', java.version: '23.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7a6216a5fe0215010b46e503728bc246, findElement {using=css selector, value=[class=v-icon-user-14]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 133.0.6943.126, chrome: {chromedriverVersion: 133.0.6943.126 (cffa127ce7b..., userDataDir: /var/folders/mj/yfskdm8d257...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59999/devtoo..., se:cdpVersion: 133.0.6943.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7a6216a5fe0215010b46e503728bc246
+Command: [5b5b75cdffde3ddfc56541bde7b0385f, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+ ', '    ')) = &quot;Адрес проживания на курорте&quot;]/parent::*}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 133.0.6943.126, chrome: {chromedriverVersion: 133.0.6943.126 (cffa127ce7b..., userDataDir: /var/folders/mj/yfskdm8d257...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54595}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54595/devtoo..., se:cdpVersion: 133.0.6943.126, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b5b75cdffde3ddfc56541bde7b0385f
 	at java.base@23.0.2/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@23.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base@23.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -219,7 +222,7 @@ Session ID: 7a6216a5fe0215010b46e503728bc246
 </thead>
 <tr>
 <td class="failures">Excursion()</td>
-<td class="failures">27.195s</td>
+<td class="failures">29.032s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -230,9 +233,9 @@ Session ID: 7a6216a5fe0215010b46e503728bc246
 <pre>SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-февр. 23, 2025 3:54:09 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+февр. 23, 2025 9:15:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 133
-февр. 23, 2025 3:54:09 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+февр. 23, 2025 9:15:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 133.0.6943.126. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.13.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
@@ -245,7 +248,7 @@ WARNING: Unable to find version of CDP to use for 133.0.6943.126. You may need t
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 23 февр. 2025 г., 03:54:35</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 23 февр. 2025 г., 09:15:57</p>
 </div>
 </div>
 </body>
