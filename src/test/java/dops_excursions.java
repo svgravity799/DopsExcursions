@@ -5,7 +5,6 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-
 import java.util.Set;
 import java.time.Duration;
 import static com.codeborne.selenide.Selectors.byText;
@@ -21,15 +20,18 @@ public class dops_excursions {
   @Test
   void Excursion() {
       Configuration.holdBrowserOpen = true;
-      Configuration.timeout = 20000; // Устанавливаем таймаут в 20 секунд
+    //  Configuration.timeout = 20000; // Устанавливаем таймаут в 20 секунд
 
       open("http://fstravel.com/searchexcursions");
 
-       //Авторизация
+
+
+      //Авторизация
         $("[class=v-icon-user-14]").click();
         $("[class=form__field]").setValue("testfspavelclient09@yandex.ru");
         $("[id=password]").setValue("Pavelpa42!!!");
         $("[type=submit]").click();
+      System.out.println("Авторизация выполнилась");
 
         //Поиск
 $(byText("Страна поездки")).click();
@@ -43,6 +45,7 @@ $(byText("Выбрать")).click();
       $(byText("13")).click();
      $(byText("Найти")).click();
       $(byText("Найти")).click();
+      System.out.println("Поиск выполнен");
 
     //Попап
       $("[class=excursion-card__content-btn]").click();
@@ -51,7 +54,7 @@ $(byText("Выбрать")).click();
       sleep(1500);
       $("[class=excursion-modal-main__buttons-btn").click();
       $("[class=excursion-modal-main__buttons-btn").click();
-
+System.out.println("Добавление в корзину выполнено");
 
 
       //  Ждем, пока не откроется новая вкладка (макс 5 секунд)
@@ -71,20 +74,19 @@ $(byText("Выбрать")).click();
 
 //  Переключаемся на новую вкладку
       switchTo().window(newTab);
-
-      //sleep(10000);
+      System.out.println("Переход в корзину выполнен");
 
 
     //  $("[class=popmechanic-close]").click();
       $("[class=form__field]").click();
       $("[class=form__field]").setValue("Похоже получилось");
-
+      System.out.println("Адресс успешно заполнен");
      // sleep(1000);
 
       $("[name=lastName]").setValue("Автотестимя");
       $("[name=firstName]").setValue("Автотестимя");
       $("[name=middleName]").setValue("Автотестимя");
-
+      System.out.println("Фио успешно заполнено");
       Selenide.actions()
               .sendKeys(Keys.TAB)  // Первый TAB
               .sendKeys(Keys.TAB)  // Второй TAB
@@ -102,28 +104,9 @@ $(byText("Выбрать")).click();
 
       System.out.println($(":focus").getAttribute("class"));  // - спросить как пишется строка
       $(":focus").setValue("581929");
+      System.out.println("Серия/номер пасспорта успешно заполнены");
 
-
-
-
-     // $(byText("Cерия документа")).click();
-    //  $(byText("Cерия документа")).click();
-    //  $(byText("Cерия документа")).setValue("425");
-
-
-
-
-
-    //  $("[class=traveller-field]").setValue("174234");
-   //   sleep(1000);
-
-
-
-
-  //    $("[class=form__field]").setValue("Похоже получилось1");
-    //  $(byText("Серия документа")).click();
-  //$(byText("Cерия документа")).setValue("19");
-
+      System.out.println("Тест пройден успешно!");
 
 
 

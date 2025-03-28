@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dops_excursions" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-27T01:15:16" hostname="MacBook-Air-Pavel.local" time="12.496">
+<testsuite name="dops_excursions" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-28T20:31:20" hostname="MacBook-Air-Pavel.local" time="12.918">
   <properties/>
-  <testcase name="Excursion()" classname="dops_excursions" time="12.496"/>
-  <system-out><![CDATA[form__field
+  <testcase name="Excursion()" classname="dops_excursions" time="12.918"/>
+  <system-out><![CDATA[Авторизация выполнилась
+Поиск выполнен
+Добавление в корзину выполнено
+Переход в корзину выполнен
+Адресс успешно заполнен
+Фио успешно заполнено
 form__field
+form__field
+Серия/номер пасспорта успешно заполнены
+Тест пройден успешно!
 ]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-мар. 26, 2025 6:15:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 28, 2025 1:31:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 134
-мар. 26, 2025 6:15:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+мар. 28, 2025 1:31:22 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 134.0.6998.165. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.13.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
